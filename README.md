@@ -1,0 +1,2 @@
+# TermProject
+Minibatch K-Means

@@ -1,0 +1,6 @@
+The input was larger than 100 MB, so it could not be uploaded on git.
+
+The input data is available on following IU Box link:
+https://iu.box.com/s/lv07v8fefosuij2h9mnsouhp89mq9xoe
+
+Please read the ReadMe.docx in code folder for further instructions

@@ -1,0 +1,36 @@
+<project name="Harp-App" basedir="." default="compile">
+  <property name="build" location="build"/>
+  <property name="lib" location="lib"/>
+  <property environment="env"/>
+
+  <path id="class.path">
+    <fileset dir="lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${env.YARN_HOME}/share/hadoop/mapreduce">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${env.YARN_HOME}/share/hadoop/common">
+      <include name="**/*.jar" />
+      <include name="**/lib/*.jar" />
+    </fileset>
+  </path>
+
+  <target name="clean">
+    <delete dir="build" />
+  </target>
+
+  <target name="compile" depends="clean">
+    <mkdir dir="${build}/classes" />
+    <javac memoryMaximumSize="256m" memoryInitialSize="256m" fork="true" destdir="${build}/classes" debug="true" debuglevel="lines,vars,source">
+      <src path="src" />
+      <include name="edu/iu/fileformat/**" />
+      <include name="edu/iu/benchmark/**" />
+      <include name="edu/iu/km/**"/>
+      <include name="edu/iu/mean/**"/>
+      <include name="edu/iu/kmexample/**"/>
+      <classpath refid="class.path" />
+    </javac>
+    <jar destfile="${build}/harp3-app-hadoop-2.6.0.jar" basedir="${build}/classes"/>
+  </target>
+</project>

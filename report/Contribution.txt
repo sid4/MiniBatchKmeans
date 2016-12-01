@@ -1,0 +1,35 @@
+Contribution
+
+Rudrani
+
+- Code output generation for Single-Threaded Code
+- Studied paper: Yadav, M. K., & Baria, M. J. Mini-Batch K-Means Clustering Using Map-Reduce in Hadoop
+- 50 % code output generation for SSE and Categorization Accuracy Results
+- Came up with idea for Categorization Experiment.
+- Implemented SSE generation code.
+- Implemented function to read and transform the category file.
+- Implemented the code for random picking of documents
+- Implemented the code for caching the centroids
+- Other parts of the code were more or less shared equally between us
+
+
+Siddharth
+
+- Code output generation for Multi-Threaded Code
+- Studied paper:Wan, J., Yu, W., & Xu, X. (2009, December). Design and implement of distributed document clustering based on MapReduce. 
+- 50 % code output generation for SSE and Categorization Accuracy Results.
+- Came up with idea for SSE Experiment.
+- Implemented Categorization Accuracy finder code.
+- Implemented function to read and transform the documents file.
+- Implemented cosine similarity function
+- Implemented the code for updating the centeroids
+- Other parts of the code were more or less shared equally between us
+
+
+We both collaborated on working on:
+- Report Writing
+- Poster preparation
+- Setup of Juliet environment
+- Understanding Harp functionalities and using custom Data Structure for exchanging information with Tables
+- Understanding which part of the code can be multi-threaded and distributed
+
